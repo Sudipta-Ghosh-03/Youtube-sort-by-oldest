@@ -25,9 +25,9 @@ vidUploadTime = vidUploadTime[::-1]
 
 numVids = ''
  
-while numVids not in range(len(vidlist)): 
+while numVids not in range(len(vidlist)+1): 
     numVids = int(input(f"How many old videos do you want to see? \nThe channel has total {len(vidlist)} videos(excluding shorts) \nBe sensible with your choice \nChoosing a number too high might disrupt the output: "))
-    if numVids not in range(len(vidlist)):
+    if numVids not in range(len(vidlist)+1):
         print("Invalid choice")
 
 data = {'Title' : vidTitle[:numVids], 'Uploaded' : vidUploadTime[:numVids], 'Url': vidlist[:numVids]}
